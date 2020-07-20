@@ -45,7 +45,7 @@
             <!--Tabela 1 -Cadastros -->
             <div class="row">
                 <div class="col-md-12">
-                    <table>
+                    <table class="table">
                         <tr>
                             <td>N°</td>
                             <td>Lembrete</td>
@@ -55,7 +55,33 @@
                     <!--Cod. PHP -->
                     <?php
                         include "classes/database.php";
-                        new BancoDeDados;
+                        $banco = new BancoDeDados;
+                        $banco->query("SELECT * FROM lista");
+                        $total_reg = $banco->linhas();
+
+                        if ($total_reg != 0){
+                            foreach($banco->result() as $dados){
+                            $cod = $dados['id'];
+                            $lembrete = $dados['lembrete'];
+                            $dt_cad = $dados['dt_cadastro'];
+                            $dt_lembrete = $dados['dt_lembrete'];
+                            $fechado = $dados['resolvido'];
+
+                            if ($fechado == true){
+                                $cor_linha = 'text-success';
+                            }else{
+                                $cor_linha = 'text-danger';
+                            }
+                        ?>
+                            <tr class="<?php echo $cor_linha; ?>">
+                                <td><?php echo $cod;?></td>
+                                <td><?php echo $lembrete;?></td>
+                                <td><?php echo $dt_cad;?></td>
+                                <td><?php echo $dt_lembrete;?></td>
+                            </tr>                                                
+                    <?php
+                            }
+                        }
                     ?>
                     </table>
                 </div>

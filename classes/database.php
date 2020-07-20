@@ -15,14 +15,14 @@
           $host = 'localhost';
           $usuario = 'root';
           $senha = '';
-          $db = 'tudor';
+          $db = 'todolist';
 
           $this->banco = $db;
           $this->pdo = new PDO("mysql:dbname=".$db.";host=".$host, $usuario, $senha);
           $this->pdo->exec("set names utf8");
 
         } catch (PDOException $e) {
-          echo '<div class="alert alert-danger"><b>Erro:</b> não foi possivel se conectar a '.$this->banco.' - <b>Detalhes:</b> '.$e->getMessage().'</div>';
+          echo '<div class=" mt-3 alert alert-danger"><b>Erro:</b> não foi possivel se conectar a '.$this->banco.' - <b>Detalhes:</b> '.$e->getMessage().'</div>';
         }
 
       }
