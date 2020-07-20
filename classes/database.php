@@ -15,7 +15,7 @@
           $host = 'localhost';
           $usuario = 'root';
           $senha = '';
-          $db = 'sge';
+          $db = 'tudor';
 
           $this->banco = $db;
           $this->pdo = new PDO("mysql:dbname=".$db.";host=".$host, $usuario, $senha);
