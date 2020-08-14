@@ -1,0 +1,86 @@
+html, body{
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #77097A !important;
+    font-family: sans-serif;
+    display: flex;
+    vertical-align: center;
+    justify-content: center;
+    color: white;
+
+}
+
+.conteudo{
+    padding: 1rem;
+    width: 95vw;
+    max-width: 700px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#cabecalho{
+    background-color: white;
+    border-radius: 0rem 0rem 1rem 1rem;
+    padding: 1.5rem;
+    margin-top: 0;
+}
+
+#cabecalho h1{
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2.5rem;
+    margin: 0 !important;
+    color: #77097A ;
+}
+
+#cabecalho h2{    
+    font-weight: 400 !important;
+    font-size: 1.5rem;
+    margin: 0.5rem 0 1rem 0 ;
+    color: darkorange;
+}
+
+#btn-geral{
+    background-color: #77097A !important;
+    border-color: blueviolet;
+}
+
+.input-bordas{
+    border: #77097A solid 2px !important;
+}
+
+.input-bordas:focus{
+    box-shadow: 0 0 10px #77097A !important;
+}
+
+.listagem{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    color: #77097A;
+}
+
+.listagem h1{
+    font-weight: 400 !important;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    color: #77097A ;
+}
+
+.listagem hr{
+    margin-top: 0.5rem;
+    width: 100vwe;    
+}
+
+.listagem button{
+    float: right;
+}
